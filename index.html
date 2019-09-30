@@ -7,8 +7,8 @@
 
   <title>Interactive App</title>
 
-  <meta name="description" content="Interactive app">
-  <meta name="author" content="Denise Case">
+  <meta name="description" content="GPA Calculaotr">
+  <meta name="author" content="Dylan Rongey">
 
   <!-- get current Bootstrap Material Design styles from https://mdbootstrap.com/md-bootstrap-cdn/ -->
 
@@ -41,38 +41,43 @@
       <!--Rows have columns - column 1 (7/12) -->
       <div class="col-md-7 mb-4">
 
-        <h2>Interactive app!</h2>
+        <h2>GPA Calculator!</h2>
         <hr>
 
         <fieldset class="mt-4">
-          <label for="guest">Enter your name (2 to 40 characters):</label>
-          <input id="guest" type="text" minlength="2" maxlength="40" value="Lilly">
+          <label for="gpaOne">Enter GPA ONE:</label>
+          <input id="gpaOne" type="number" min="0" max="4.0" value="3.2">
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="firstNumber">Enter first number (1 to 100):</label>
-          <input id="firstNumber" type="number" min="1" max="100" value=7>
+          <label for="gpaTwo">Enter GPA TWO:</label>
+          <input id="gpaTwo" type="number" min="0" max="4.0" value=2.9>
           <span id="firstWarning" class="text-danger"></span>
         </fieldset>
 
         <fieldset class="mt-4">
-          <label for="secondNumber">Enter second number (1 to 100):</label>
-          <input id="secondNumber" type="number" min="1" max="100" value="12">
+          <label for="gpaThree">Enter GPA THREE:</label>
+          <input id="gpaThree" type="number" min="0" max="4.0" value="3.3">
           <span id="secondWarning" class="text-danger"></span>
         </fieldset>
 
+        <table class="tab">
+          <tr>
+              <td>GPA Average:<span id="averageGPA">0.0</span></td>
+          </tr>
+          
+      </table>
       </div>
       <!--end column 1-->
 
       <!--column 2 (5/12) -->
       <div class="col-md-5 mb-4">
-        <h2>Try these:</h2>
+        <h2>Calculate GPA button:</h2>
         <hr>
-        <button id="addButton" class="btn btn-primary">Add</button>
-        <button id="getJokeButton" class="btn btn-success">Get Joke</button>
-        <button id="clicker" class="btn btn-indigo">Coming soon!</button>
+        <button id="Calculate" class="btn btn-primary">Calculate GPA Average</button>
+      
         <hr>
-        <p id="result"></p>
+        
 
       </div>
       <!-- end column 2-->
@@ -83,15 +88,7 @@
   </main>
 
   <!-- sticky footer with padding on y-axis (top and bottom) -->
-  <footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-      <span class="text-muted">Right-click / Inspect / Console</span>
-      &#9670;
-      <a href="https://profcase.github.io/js-gui/">Demo</a>
-      &#9670;
-      <a href="https://github.com/profcase/js-gui">Source</a>
-    </div>
-  </footer>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
